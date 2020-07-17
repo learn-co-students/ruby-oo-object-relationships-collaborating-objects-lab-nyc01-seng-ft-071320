@@ -1,15 +1,13 @@
 require 'pry'
 class Artist
-    attr_reader :name
+    attr_accessor :name
     @@all = []
     def initialize(name)
         @name = name
         @@all << self
         @songs = []
     end
-    def name=(name)
-        @name = name
-    end
+   
     def self.all
         @@all
     end
